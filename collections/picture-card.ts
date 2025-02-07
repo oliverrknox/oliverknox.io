@@ -25,5 +25,8 @@ export const PictureCard: CollectionConfig = {
 			required: true,
 			unique: true
 		}
-	]
+	],
+	access: {
+		read: () => true
+	}
 };

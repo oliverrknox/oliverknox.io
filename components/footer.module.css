@@ -1,0 +1,21 @@
+.footer {
+	display: flex;
+	justify-content: center;
+	height: 6.4rem;
+	background: var(--primary);
+	color: var(--background);
+}
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 128rem;
+	padding-left: 1.6rem;
+	padding-right: 1.6rem;
+	width: 100%;
+}
+
+.name {
+	font-weight: 800;
+}

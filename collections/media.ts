@@ -12,5 +12,8 @@ export const Media: CollectionConfig = {
 			type: "text",
 			required: true
 		}
-	]
+	],
+	access: {
+		read: () => true
+	}
 };
