@@ -10,7 +10,7 @@ interface PictureCardProps {
 export const PictureCard: FC<PictureCardProps> = ({ heading, content, image }) => {
 	return (
 		<div className={styles.container}>
-			<div className={styles.textContainer}>
+			<div className={styles["text-container"]}>
 				<h1 className={styles.heading}>{heading}</h1>
 				<p className={styles.content}>{content}</p>
 			</div>

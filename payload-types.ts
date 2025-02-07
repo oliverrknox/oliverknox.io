@@ -141,15 +141,14 @@ export interface PayloadLockedDocument {
  */
 export interface PayloadPreference {
 	id: string;
-	user: {
-		relationTo: "users";
+	u"users"		relationTo: 'users';
 		value: string | User;
 	};
 	key?: string | null;
 	value?:
 		| {
-				[k: string]: unknown;
-		  }
+		[k: string]: unknown;
+	}
 		| unknown[]
 		| string
 		| number
@@ -254,6 +253,8 @@ export interface Auth {
 	[k: string]: unknown;
 }
 
+
 declare module "payload" {
-	export interface GeneratedTypes extends Config {}
+	export interface GeneratedTypes extends Config {
+	}
 }
