@@ -64,19 +64,19 @@ export interface UserAuthOperations {
  * via the `definition` "media".
  */
 export interface Media {
-	id: string;
-	alt: string;
-	updatedAt: string;
-	createdAt: string;
-	url?: string | null;
-	thumbnailURL?: string | null;
-	filename?: string | null;
-	mimeType?: string | null;
-	filesize?: number | null;
-	width?: number | null;
-	height?: number | null;
-	focalX?: number | null;
-	focalY?: number | null;
+  id: string;
+  alt: string;
+  updatedAt: string;
+  createdAt: string;
+  url?: string | null;
+  thumbnailURL?: string | null;
+  filename?: string | null;
+  mimeType?: string | null;
+  filesize?: number | null;
+  width?: number | null;
+  height?: number | null;
+  focalX?: number | null;
+  focalY?: number | null;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -129,7 +129,7 @@ export interface PayloadLockedDocument {
   globalSlug?: string | null;
   user: {
     relationTo: 'users';
-  "users": string | User;
+    value: string | User;
   };
   updatedAt: string;
   createdAt: string;

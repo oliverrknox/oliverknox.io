@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import Image from "next/image";
 import { getPayload } from "payload";
 import config from "@payload-config";
@@ -5,7 +6,10 @@ import { HeroBanner } from "@/components/hero-banner";
 import { PictureCard } from "@/components/picture-card";
 import { assertRequiredMedia } from "@/utils/assertions/assert-required-media";
 import { assertRequiredPictureCard } from "@/utils/assertions/assert-required-picture-card";
+import { generateMetadata } from "@/utils/next/generate-metadata";
 import styles from "./page.module.css";
+
+export const metadata: Metadata = generateMetadata("Home");
 
 export default async function Home() {
 	const payload = await getPayload({ config });
