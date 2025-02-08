@@ -9,7 +9,7 @@ export const PageLayout: FC<PropsWithChildren<PageWrapperProps>> = ({ hero, chil
 	return (
 		<main>
 			<section className={styles.hero}>{hero}</section>
-			<section className={styles.content} id="#content">
+			<section className={styles.content} id="content">
 				{children}
 			</section>
 		</main>
