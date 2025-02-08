@@ -6,7 +6,6 @@ import { HeroBanner } from "@/components/hero-banner";
 import { PageLayout } from "@/components/page-layout";
 import { PictureCard } from "@/components/picture-card";
 import { assertRequiredMedia } from "@/utils/assertions/assert-required-media";
-import { assertRequiredPictureCard } from "@/utils/assertions/assert-required-picture-card";
 import { generateMetadata } from "@/utils/next/generate-metadata";
 
 export const metadata: Metadata = generateMetadata("Home");
@@ -22,7 +21,6 @@ export default async function Home() {
 			}
 		>
 			{pictureCards.docs.map((pictureCard) => {
-				assertRequiredPictureCard(pictureCard);
 				assertRequiredMedia(pictureCard.image);
 
 				return (

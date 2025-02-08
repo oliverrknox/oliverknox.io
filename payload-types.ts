@@ -13,6 +13,7 @@ export interface Config {
 	collections: {
 		media: Media;
 		"picture-card": PictureCard;
+		"about-card": AboutCard;
 		users: User;
 		"payload-locked-documents": PayloadLockedDocument;
 		"payload-preferences": PayloadPreference;
@@ -22,6 +23,7 @@ export interface Config {
 	collectionsSelect: {
 		media: MediaSelect<false> | MediaSelect<true>;
 		"picture-card": PictureCardSelect<false> | PictureCardSelect<true>;
+		"about-card": AboutCardSelect<false> | AboutCardSelect<true>;
 		users: UsersSelect<false> | UsersSelect<true>;
 		"payload-locked-documents": PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
 		"payload-preferences": PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
@@ -91,6 +93,19 @@ export interface PictureCard {
 	updatedAt: string;
 	createdAt: string;
 }
+
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "about-card".
+ */
+export interface AboutCard {
+	id: string;
+	heading: string;
+	content: string;
+	order: number;
+	updatedAt: string;
+	createdAt: string;
+}
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "users".
@@ -124,6 +139,10 @@ export interface PayloadLockedDocument {
 				value: string | PictureCard;
 		  } | null)
 		| ({
+				relationTo: "about-card";
+				value: string | AboutCard;
+		  } | null)
+		| ({
 				relationTo: "users";
 				value: string | User;
 		  } | null);
@@ -140,16 +159,15 @@ export interface PayloadLockedDocument {
  * via the `definition` "payload-preferences".
  */
 export interface PayloadPreference {
-	id: string;
-	user: {
-		relationTo: "users";
+	id: str"users"ser: {
+		relationTo: 'users';
 		value: string | User;
 	};
 	key?: string | null;
 	value?:
 		| {
-				[k: string]: unknown;
-		  }
+		[k: string]: unknown;
+	}
 		| unknown[]
 		| string
 		| number
@@ -199,6 +217,18 @@ export interface PictureCardSelect<T extends boolean = true> {
 	updatedAt?: T;
 	createdAt?: T;
 }
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "about-card_select".
+ */
+export interface AboutCardSelect<T extends boolean = true> {
+	heading?: T;
+	content?: T;
+	order?: T;
+	updatedAt?: T;
+	createdAt?: T;
+}
+
 /**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "users_select".
@@ -254,6 +284,8 @@ export interface Auth {
 	[k: string]: unknown;
 }
 
+
 declare module "payload" {
-	export interface GeneratedTypes extends Config {}
+	export interface GeneratedTypes extends Config {
+	}
 }

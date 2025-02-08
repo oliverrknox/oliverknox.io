@@ -2,6 +2,7 @@ import sharp from "sharp";
 import { lexicalEditor } from "@payloadcms/richtext-lexical";
 import { mongooseAdapter } from "@payloadcms/db-mongodb";
 import { buildConfig } from "payload";
+import { AboutCard } from "@/collections/about-card";
 import { Media } from "@/collections/media";
 import { PictureCard } from "@/collections/picture-card";
 
@@ -10,7 +11,7 @@ export default buildConfig({
 	editor: lexicalEditor(),
 
 	// Define and configure your collections in this array
-	collections: [Media, PictureCard],
+	collections: [Media, PictureCard, AboutCard],
 
 	// Your Payload secret - should be a complex and secure string, unguessable
 	secret: process.env.PAYLOAD_SECRET || "",
