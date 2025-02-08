@@ -1,43 +1,120 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [
-`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# oliverknox.io
 
-## Getting Started
+![License](https://img.shields.io/github/license/oliverrknox/oliverknox.io)
 
-First, run the development server:
+## Overview
+
+A portfolio website built with Next.js and PayloadCMS.
+
+## Table of contents
+
+1. [Features](#features)
+2. [Architecture](#rchitecture)
+3. [Requirements](#requirements)
+4. [Installation](#installation)
+5. [Configuration](#configuration)
+6. [Usage](#usage)
+7. [Testing](#testing)
+8. [Deployment](#deployment)
+9. [Contributing](#contributing)
+10. [License](#license)
+11. [Contact](#contact)
+
+## Features
+
+- **Built with Next.js**: A fast, server-side rendered React framework for optimized performance and SEO.
+- **Headless CMS with Payload**: Dynamic content management with Payload CMS for easy updates without altering code.
+- **GitHub Integration**: Seamless integration with GitHub for managing and deploying the site.
+- **Caching for Improved Performance**: Response caching for faster page loads and optimized user experience.
+- **SEO Optimization**: Built-in SEO capabilities with Next.js, ensuring your portfolio ranks well in search engines.
+
+## Requirements
+
+Ensure you have the following installed:
+
+- [Node.js v20.x or higher](https://nodejs.org)
+- [npm 10.7.x or higher](https://npmjs.com)
+
+## Installation
+
+### Steps
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/oliverrknox/oliverknox.io.git
+    ```
+2. Install dependencies
+    ```bash
+    npm install
+    ```
+
+## Configuration
+
+Instructions to configure the application.
+
+- **Environment Variables**
+    - `PAYLOAD_SECRET`: A secret key used by PayloadCMS for auth (for local development any sufficiently long string will do).
+    - `DATABASE_URI`: The URI of a MongoDB atlas cluster.
+    - `BLOB_READ_WRITE_TOKEN`: The read write token for Vercel blob storage (for local development this can be omitted).
+
+## Usage
+
+Instructions to start and interact with the application.
+
+### Starting the app
+
+To run the app in development mode:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+  npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To run the app in production mode:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+  npm run build
+  npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically
-optimize and load [Geist](https://vercel.com/font), a new
-font family for Vercel.
+## Testing
 
-## Learn More
+Instructions for running tests.
 
-To learn more about Next.js, take a look at the following resources:
+### Unit Tests
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To run unit tests:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions
-are welcome!
+### Integration Tests
 
-## Deploy on Vercel
+To run integration tests:
 
-The easiest way to deploy your Next.js app is to use the
-[Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
-from the creators of Next.js.
+## Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for
-more details.
+Instructions for deploying the application to Vercel:
+
+- The repository has Vercel integrated via GitHub.
+- It will run a production build on pushes to the `main` branch.
+
+## Contributing
+
+Guidelines for contributing to the project.
+
+- Fork the repository
+- Create a new branch
+- Make your changes
+- Submit a pull request
+
+> [!NOTE]
+> Add any media files inside `public/media` as well as the CMS for better accessibility.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Contact
+
+- **Author**: Oliver Knox
+- **Email**: hi@oliverknox.io
+- **GitHub**: [oliverrknox](https://github.com/oliverrknox)
+
+---
