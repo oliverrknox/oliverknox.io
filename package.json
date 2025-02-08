@@ -10,6 +10,7 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
+		"@octokit/rest": "^21.1.0",
 		"@payloadcms/db-mongodb": "^3.22.0",
 		"@payloadcms/next": "^3.22.0",
 		"@payloadcms/richtext-lexical": "^3.22.0",
