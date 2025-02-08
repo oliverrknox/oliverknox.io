@@ -6,6 +6,7 @@ import { AboutCard } from "@/collections/about-card";
 import { ExperienceCard } from "@/collections/experience-card";
 import { Media } from "@/collections/media";
 import { PictureCard } from "@/collections/picture-card";
+import { vercelBlobStorage } from "@payloadcms/storage-vercel-blob";
 
 export default buildConfig({
 	// If you'd like to use Rich Text, pass your editor here
@@ -25,5 +26,6 @@ export default buildConfig({
 	// make sure to install it and pass it to the config.
 	// This is optional - if you don't need to do these things,
 	// you don't need it!
-	sharp
+	sharp,
+	plugins: [vercelBlobStorage({ collections: { [Media.slug]: true }, token: process.env.BLOB_READ_WRITE_TOKEN })]
 });
