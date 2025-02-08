@@ -9,7 +9,6 @@ A portfolio website built with Next.js and PayloadCMS.
 ## Table of contents
 
 1. [Features](#features)
-2. [Architecture](#rchitecture)
 3. [Requirements](#requirements)
 4. [Installation](#installation)
 5. [Configuration](#configuration)
