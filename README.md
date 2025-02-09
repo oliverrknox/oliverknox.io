@@ -26,6 +26,7 @@ A portfolio website built with Next.js and PayloadCMS.
 - **GitHub Integration**: Seamless integration with GitHub for managing and deploying the site.
 - **Caching for Improved Performance**: Response caching for faster page loads and optimized user experience.
 - **SEO Optimization**: Built-in SEO capabilities with Next.js, ensuring your portfolio ranks well in search engines.
+- **Sentry Integration**: Real-time error tracking and performance monitoring, ensuring faster issue resolution. 
 
 ## Requirements
 
@@ -55,6 +56,8 @@ Instructions to configure the application.
     - `PAYLOAD_SECRET`: A secret key used by PayloadCMS for auth (for local development any sufficiently long string will do).
     - `DATABASE_URI`: The URI of a MongoDB atlas cluster.
     - `BLOB_READ_WRITE_TOKEN`: The read write token for Vercel blob storage (for local development this can be omitted).
+    - `SENTRY_AUTH_TOKEN`: The authentication token for Sentry (for local development place this in `.env.sentry-build-plugin`).
+
 
 ## Usage
 
