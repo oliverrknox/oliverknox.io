@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {};
 
 export default withSentryConfig(withPayload(nextConfig), {
 	org: "oliver-knox",
-	project: "javascript-nextjs",
+	project: "oliverknox-io",
 	silent: !process.env.CI,
 	widenClientFileUpload: true,
 	reactComponentAnnotation: {
